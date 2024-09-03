@@ -1,7 +1,6 @@
-# importar módulo O.S. para limpeza da tela 
+
 import os
 
-# Menu de opções 
 menu = """
     [0] - Desistir da travessia
     [1] - Posição atual do Amostradinho
@@ -15,11 +14,11 @@ colunas = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N"]
 linhas = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 direcoes = ["Norte", "Leste", "Sul", "Oeste"]
 
-# posição de coluna do Amostradinho
+
 col_amostradinho = "A"
-# posição de linha do Amostradinho
+
 lin_amostradinho = 3
-# direção de caminhada do Amostradinho
+
 dir_amostradinho = "Leste"
 
 
@@ -91,66 +90,61 @@ def caminhar_para()->str:
 
 
 
-# laço de repetição infinito
+
 while(True): 
-    # faz a limpeza da tela
+
     os.system("cls")
 
-    # imprime o menu de opções
     print(f"\n{menu}\n")
 
-    # captura a resposta do usuário
     resposta = input("Selecione uma opção: ")
 
-    # testa a resposta do usuário
-    # se resposta for igual a zero
     if resposta == "0":
-        # faz a limpeza da tela
+
         os.system("cls")
-        # imprime mensagem de desistência
+
         print("Desistindo da travessia! :(")
-        print() # print vazio para pular uma linha
-        # interrompe o loop infinito
+        print() 
         break
 
-    # se resposta for igual a 1 
+
     elif resposta == "1":
-        print() # print vazio para pular uma linha
+        print() 
         posicao_amostradinho = f"\t Posição: {col_amostradinho}{lin_amostradinho}"
         print(posicao_amostradinho)
-        input("") # Input vazio para fazer leitura da mensagem impressa
+        input("")
 
-    # se resposta for igual a 2
+   
     elif resposta == "2":
-        print() # print vazio para pular uma linha
+        print() 
         print(caminhar_para())
-        input("") # Input vazio para fazer leitura da mensagem impressa
+        input("")
 
-    # se resposta for igual a 3
+    
     elif resposta == "3":
-        print() # print vazio para pular uma linha
+        print() 
         girar_esquerda()
         nova_direcao = f"\t Nova direção: {dir_amostradinho}"
         print(nova_direcao)
-        input("") # Input vazio para fazer leitura da mensagem impressa
+        input("")
 
-    # se resposta for igual a 4
+    
     elif resposta == "4":
-        print() # print vazio para pular uma linha
+        print() 
         girar_direita()
         nova_direcao = f"\t Nova direção: {dir_amostradinho}"
         print(nova_direcao)
-        input("") # Input vazio para fazer leitura da mensagem impressa
+        input("")
 
-    # se resposta for igual a 5
+    
     elif resposta == "5":
-        print() # print vazio para pular uma linha
+        print() 
         direcao_amostradinho = f"\t Direção: {dir_amostradinho}"
         print(direcao_amostradinho)
-        input("") # Input vazio para fazer leitura da mensagem impressa
+        input("")
 
-    # para nenhuma das opções disponíveis
+    
     else:
-        print() # print vazio para pular uma linha
+        print() 
         print("\nOpção inválida")
-        input("") # Input vazio para fazer leitura da mensagem impressa
+        input("") 
